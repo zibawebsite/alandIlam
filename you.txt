@@ -1,0 +1,68 @@
+جواب سوال اول
+2024/07/11 15:30:45
+ [error]1234#1234:*56789 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.1.100, server: example.com, request:
+ “GET /api/data HTTP/1.1”, upstream: “http://127.0.0.1:8000/api/data”, host: “example.com”, referrer: “https://example.com/”
+
+
+
+Timestamp (زمان): 2024/07/11 16:15:20
+Log Level (سطح لاگ): error
+PID (شناسه فرآیند): 1234
+TID (شناسه نخ): 1234
+Error Code (کد خطا): 67890
+Error Message (پیام خطا): open() “/usr/share/nginx/html/not_found.html” failed (2: No such file or directory)
+Client IP (آی‌پی کلاینت): 192.168.1.101
+Server (سرور): example.com
+Request (درخواست): GET /nonexistent-page HTTP/1.1
+Host (میزبان): example.com
+Referrer (ارجاع‌دهنده): https://example.com/
+توضیحات لاگ:
+زمان: این لاگ در تاریخ 11 جولای 2024 ساعت 16:15:20 ایجاد شده است.
+سطح لاگ: سطح لاگ error است که نشان‌دهنده وجود خطا می‌باشد.
+شناسه فرآیند و نخ: هر دو شناسه 1234 هستند.
+کد خطا: *67890
+پیام خطا: این پیام نشان می‌دهد که فایل “/usr/share/nginx/html/not_found.html” وجود ندارد و نمی‌توان آن را باز کرد (خطای 2: فایل یا دایرکتوری وجود ندارد).
+آی‌پی کلاینت: 192.168.1.101
+سرور: example.com
+درخواست: درخواست HTTP از نوع GET برای مسیر /nonexistent-page بوده است.
+میزبان: example.com
+ارجاع‌دهنده: صفحه ارجاع‌دهنده به این درخواست https://example.com/ بوده است.
+
+
+
+جواب سوال دوم
+
+2024/07/11 16:15:20 [error] 1234#1234: *67890 open() “/usr/share/nginx/html/not_found.html” failed
+ (2: No such file or directory), client: 192.168.1.101, server: example.com, request:
+ “GET /nonexistent-page HTTP/1.1”, host: “example.com”, referrer: “https://example.com/”
+
+
+
+
+Timestamp (زمان): 2024/07/11 15:30:45
+Log Level (سطح لاگ): error
+PID (شناسه فرآیند): 1234
+TID (شناسه نخ): 1234
+Error Code (کد خطا): 56789
+Error Message (پیام خطا): connect() failed (111: Connection refused) while connecting to upstream
+Client IP (آی‌پی کلاینت): 192.168.1.100
+Server (سرور): example.com
+Request (درخواست): GET /api/data HTTP/1.1
+Upstream (بالادستی): http://127.0.0.1:8000/api/data
+Host (میزبان): example.com
+Referrer (ارجاع‌دهنده): https://example.com/
+توضیحات لاگ:
+زمان: این لاگ در تاریخ 11 جولای 2024 ساعت 15:30:45 ایجاد شده است.
+سطح لاگ: سطح لاگ error است که نشان‌دهنده وجود خطا می‌باشد.
+شناسه فرآیند و نخ: هر دو شناسه 1234 هستند.
+کد خطا: *56789
+پیام خطا: این پیام نشان می‌دهد که اتصال به بالادستی (upstream) ناموفق بوده است (خطای 111: اتصال رد شد).
+آی‌پی کلاینت: 192.168.1.100
+سرور: example.com
+درخواست: درخواست HTTP از نوع GET برای مسیر /api/data بوده است.
+بالادستی: آدرس بالادستی که درخواست به آن فرستاده شده است http://127.0.0.1:8000/api/data بوده است.
+میزبان: example.com
+ارجاع‌دهنده: صفحه ارجاع‌دهنده به این درخواست https://example.com/ بوده است.
+نتیجه‌گیری:
+لاگ اول: خطا به دلیل عدم وجود فایل not_found.html است.
+لاگ دوم: خطا به دلیل رد شدن اتصال به بالادستی بوده است.
